@@ -40,10 +40,9 @@ function Chat() {
                                 chat.role === "user"? 
                                 <p className="userMessage">{chat.content}</p> : 
                                 <div className="gptMessage">
-                                    <ReactMarkdown rehypePlugins={[rehypeHighlight]}>  
+                                    <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
                                         {Array.isArray(chat.content) ? chat.content.join("") : chat.content}
                                     </ReactMarkdown>
-                                    <ReactMarkdown rehypePlugins={[rehypeHighlight]}>{chat.content}</ReactMarkdown>
                                 </div>
                             }
                         </div>
